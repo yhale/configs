@@ -2,6 +2,7 @@
 
 # DIRECTORIES
 mkdir /opt/rtmp/{hls,dash,store} -p
+chown www-data:www-data /opt/rtmp/{hls,dash,store}
 
 # NGINX
 apt-get purge nginx-light nginx-common libnginx-mod-rtmp -y
