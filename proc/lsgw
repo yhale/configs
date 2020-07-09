@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # DIRECTORIES
-mkdir /opt/rtmp/{hls,dash} -p
+mkdir /opt/rtmp/{hls,dash,store} -p
 
 # NGINX
 apt-get install nginx libnginx-mod-rtmp
