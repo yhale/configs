@@ -4,8 +4,8 @@
 mkdir /opt/rtmp/{hls,dash,store} -p
 
 # NGINX
-apt-get purge nginx-light nginx-common libnginx-mod-rtmp
-apt-get install nginx-light nginx-common libnginx-mod-rtmp
+apt-get purge nginx-light nginx-common libnginx-mod-rtmp -y
+apt-get install nginx-light nginx-common libnginx-mod-rtmp -y
 
 # NGINX ( config )
 rm -rf /etc/nginx/nginx.conf
