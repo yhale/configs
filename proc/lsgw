@@ -8,4 +8,5 @@ apt-get purge nginx-light nginx-common libnginx-mod-rtmp
 apt-get install nginx-light nginx-common libnginx-mod-rtmp
 
 # NGINX ( config )
+rm -rf /etc/nginx/nginx.conf
 curl https://raw.githubusercontent.com/yhale/configs/prod/nginx.conf -o /etc/nginx/nginx.conf
