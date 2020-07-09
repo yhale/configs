@@ -14,4 +14,5 @@ rm -rf /etc/nginx/nginx.conf
 curl https://raw.githubusercontent.com/yhale/configs/prod/nginx.conf -o /etc/nginx/nginx.conf
 
 # SYSTEMD
+nginx -t
 systemctl restart nginx
