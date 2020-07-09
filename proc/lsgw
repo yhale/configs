@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# DIRECTORIES
+mkdir /opt/rtmp/{hls,dash} -p
+
+# NGINX
+apt-get install nginx libnginx-mod-rtmp
+
+# NGINX ( config )
+rm -rf /etc/nginx/nginx.conf
+curl https://raw.githubusercontent.com/yhale/configs/prod/nginx.conf -o /etc/nginx/nginx.conf
