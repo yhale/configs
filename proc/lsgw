@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # DIRECTORIES
+rm -rf /opt/rtmp/{hls,dash,store}
 mkdir /opt/rtmp/{hls,dash,store} -p
 chown www-data:www-data /opt/rtmp/{hls,dash,store}
 
@@ -11,3 +12,6 @@ apt-get install nginx-light nginx-common libnginx-mod-rtmp -y
 # NGINX ( config )
 rm -rf /etc/nginx/nginx.conf
 curl https://raw.githubusercontent.com/yhale/configs/prod/nginx.conf -o /etc/nginx/nginx.conf
+
+# SYSTEMD
+systemctl restart nginx
